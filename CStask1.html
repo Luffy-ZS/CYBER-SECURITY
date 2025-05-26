@@ -1,0 +1,114 @@
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-26 21:26 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 21:26
+Completed NSE at 21:26, 0.01s elapsed
+Initiating NSE at 21:26
+Completed NSE at 21:26, 0.00s elapsed
+Initiating NSE at 21:26
+Completed NSE at 21:26, 0.00s elapsed
+Initiating ARP Ping Scan at 21:26
+Scanning 192.168.18.49 [1 port]
+Completed ARP Ping Scan at 21:26, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 21:26
+Completed Parallel DNS resolution of 1 host. at 21:26, 2.03s elapsed
+Initiating SYN Stealth Scan at 21:26
+Scanning 192.168.18.49 [65535 ports]
+Discovered open port 53/tcp on 192.168.18.49
+Discovered open port 12387/tcp on 192.168.18.49
+Completed SYN Stealth Scan at 21:26, 11.64s elapsed (65535 total ports)
+Initiating Service scan at 21:26
+Scanning 2 services on 192.168.18.49
+Completed Service scan at 21:28, 120.74s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 192.168.18.49
+NSE: Script scanning 192.168.18.49.
+Initiating NSE at 21:29
+Completed NSE at 21:29, 10.13s elapsed
+Initiating NSE at 21:29
+Completed NSE at 21:29, 1.02s elapsed
+Initiating NSE at 21:29
+Completed NSE at 21:29, 0.00s elapsed
+Nmap scan report for 192.168.18.49
+Host is up (0.030s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.51
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.51
+12387/tcp open  unknown
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden 
+|     Content-Type: text/plain
+|     Date: Mon, 26 May 2025 15:57:46 GMT
+|     Connection: close
+|     Content-Length: 19
+|     Request not allowed
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request 
+|     Content-Type: text/plain
+|     Date: Mon, 26 May 2025 15:56:56 GMT
+|     Connection: keep-alive
+|     Content-Length: 56
+|     REQUEST: Syntax error. Usage: GET /example/file.html
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 403 Forbidden 
+|     Content-Type: text/plain
+|     Date: Mon, 26 May 2025 15:56:56 GMT
+|     Connection: close
+|     Content-Length: 19
+|     Request not allowed
+|   SIPOptions: 
+|     HTTP/1.1 403 Forbidden 
+|     Content-Type: text/plain
+|     Date: Mon, 26 May 2025 15:58:01 GMT
+|     Connection: close
+|     Content-Length: 19
+|_    Request not allowed
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port12387-TCP:V=7.97%I=7%D=5/26%Time=68348F50%P=i686-pc-windows-windows
+SF:%r(GenericLines,C0,"HTTP/1\.1\x20400\x20Bad\x20Request\x20\r\nContent-T
+SF:ype:\x20text/plain\r\nDate:\x20Mon,\x2026\x20May\x202025\x2015:56:56\x2
+SF:0GMT\r\nConnection:\x20keep-alive\r\nContent-Length:\x2056\r\n\r\nBAD\x
+SF:20REQUEST:\x20Syntax\x20error\.\x20Usage:\x20GET\x20/example/file\.html
+SF:")%r(GetRequest,94,"HTTP/1\.1\x20403\x20Forbidden\x20\r\nContent-Type:\
+SF:x20text/plain\r\nDate:\x20Mon,\x2026\x20May\x202025\x2015:56:56\x20GMT\
+SF:r\nConnection:\x20close\r\nContent-Length:\x2019\r\n\r\nRequest\x20not\
+SF:x20allowed")%r(HTTPOptions,94,"HTTP/1\.1\x20403\x20Forbidden\x20\r\nCon
+SF:tent-Type:\x20text/plain\r\nDate:\x20Mon,\x2026\x20May\x202025\x2015:56
+SF::56\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2019\r\n\r\nRequ
+SF:est\x20not\x20allowed")%r(RTSPRequest,94,"HTTP/1\.1\x20403\x20Forbidden
+SF:\x20\r\nContent-Type:\x20text/plain\r\nDate:\x20Mon,\x2026\x20May\x2020
+SF:25\x2015:56:56\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2019\
+SF:r\n\r\nRequest\x20not\x20allowed")%r(FourOhFourRequest,94,"HTTP/1\.1\x2
+SF:0403\x20Forbidden\x20\r\nContent-Type:\x20text/plain\r\nDate:\x20Mon,\x
+SF:2026\x20May\x202025\x2015:57:46\x20GMT\r\nConnection:\x20close\r\nConte
+SF:nt-Length:\x2019\r\n\r\nRequest\x20not\x20allowed")%r(SIPOptions,94,"HT
+SF:TP/1\.1\x20403\x20Forbidden\x20\r\nContent-Type:\x20text/plain\r\nDate:
+SF:\x20Mon,\x2026\x20May\x202025\x2015:58:01\x20GMT\r\nConnection:\x20clos
+SF:e\r\nContent-Length:\x2019\r\n\r\nRequest\x20not\x20allowed");
+MAC Address: AE:7D:0D:00:B7:A7 (Unknown)
+Device type: phone
+Running: Google Android 10.X, Linux 4.X
+OS CPE: cpe:/o:google:android:10 cpe:/o:linux:linux_kernel:4.14
+OS details: Android 10 (Linux 4.14)
+Uptime guess: 28.939 days (since Sun Apr 27 22:57:20 2025)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   30.00 ms 192.168.18.49
+
+NSE: Script Post-scanning.
+Initiating NSE at 21:29
+Completed NSE at 21:29, 0.00s elapsed
+Initiating NSE at 21:29
+Completed NSE at 21:29, 0.00s elapsed
+Initiating NSE at 21:29
+Completed NSE at 21:29, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 147.72 seconds
+           Raw packets sent: 65559 (2.885MB) | Rcvd: 65559 (2.623MB)
